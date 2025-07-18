@@ -1,45 +1,57 @@
-# Shopify-Web-Scraper
+# Shopify Web Scraper
 
-A **FastAPI-powered backend** that scrapes product, policy, and metadata from any public Shopify store URL. 
-
----
-
-##  Features
-
--  FastAPI-based REST API
--  Extracts structured data from unstructured HTML
--  Shopify-specific selectors
--  JSON API response format
--  Auto-generated Swagger documentation
+A FastAPI-powered backend with a simple HTML + JS interface to scrape product, policy, and metadata from any public Shopify store URL.  
+It extracts data like products, hero items, policies, contact info, and social links using a single API call.
 
 ---
 
-##  Tech Stack
+## Features
 
-| Component     | Tool                     |
-|---------------|--------------------------|
-| Language      | Python 3.10              |
-| Framework     | FastAPI                  |
-| Scraping      | BeautifulSoup + Requests |
-| Packaging     | `venv`, `pip`            |
-| Docs          | Swagger UI               |
+- Shopify-specific scraping logic
+- Extracts:
+  - Product lists and hero products
+  - Privacy, return, and refund policies
+  - Contact information and FAQs
+  - Social media links and important URLs
+- FastAPI-based REST API
+- Swagger UI for API documentation
+- Simple frontend interface using HTML + JS
+- JSON API response format
 
 ---
 
-##  Installation
+## Tech Stack
+
+### Backend
+- Python 3.10
+- FastAPI
+- Uvicorn
+- BeautifulSoup
+- Requests
+- Swagger UI (auto-generated API docs)
+
+### Frontend
+- HTML + CSS
+- JavaScript (using Fetch API)
+
+### Development Tools
+- venv (virtual environment)
+- pip (Python package manager)
+
+---
+
+## Installation
 
 ```bash
-# Clone the repo
+# Clone the repository
 git clone https://github.com/yourusername/shopify-scraper.git
 cd shopify-scraper
 
-# Create virtual environment
+# Set up virtual environment
 python -m venv venv
-source venv/bin/activate       # For Linux/Mac
-# OR
-venv\Scripts\activate          # For Windows
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-# Install required packages
+# Install dependencies
 pip install -r requirements.txt
 
 # Run the FastAPI server
